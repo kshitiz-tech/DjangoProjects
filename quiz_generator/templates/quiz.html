@@ -1,0 +1,26 @@
+<h2>Generated Quiz</h2>
+<style>
+    .answer{
+        display: None;
+    }
+</style>
+<div class = 'container'>
+    {% for questions in data.questions %}
+        <div class = 'question_bank'>
+            <h5><h5>{{ questions.question }}</h5></h5>
+            <form method="get" action = 'checker'>
+            <label for= 'option1'><input type="radio" name="'answer" value= {{questions.options.a}}>{{ questions.options.a }}</label><br>
+            <label for= 'option1'><input type="radio" name="'answer" value= {{questions.options.b}}>{{ questions.options.b }}</label><br>
+            <label for= 'option1'><input type="radio" name="'answer" value= {{questions.options.c}}>{{ questions.options.c }}</label><br>
+            <label for= 'option1'><input type="radio" name="'answer" value= {{questions.options.d}}>{{ questions.options.d }}</label><br>
+            <label for = 'answer' class="answer" name="actual_answer" value={{question.answer}}>{{question.answer}}</label>
+            <label for = 'button'><input type = 'submit' name = 'submit' value = "Submit Answer"></label>
+            
+            </form>
+        </div>
+    {% endfor %}
+</div>
+<script>
+
+</script>
+

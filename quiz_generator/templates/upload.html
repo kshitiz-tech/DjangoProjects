@@ -1,0 +1,6 @@
+<h2>Upload PDF to Generate Quiz</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Generate Quiz</button>
+</form>
